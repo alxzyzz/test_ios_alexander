@@ -54,6 +54,9 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
                 
                 break
             case .failure:
+                let alert = UIAlertController(title: "Alert", message: "Error de conexión", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 break
             }
         }

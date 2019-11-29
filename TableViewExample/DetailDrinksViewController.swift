@@ -31,11 +31,13 @@ class DetailDrinksViewController : UIViewController {
     var instructions = [String]()
     var ingredients = [String]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //nameDetailLabel.text = name
         let idDrink = id
         viewMain.layer.cornerRadius = 10
+        imageDetail.layer.cornerRadius = 10
         viewImage.layer.cornerRadius = 10
         fetchData(id: idDrink)
         //downloadData()
@@ -57,40 +59,24 @@ class DetailDrinksViewController : UIViewController {
                 self.removeSpinner()
                 print(myresponse.result)
                 let myresult = try? JSON(data: myresponse.data!)
-                //print(myresult)
-                //var drinksArray:[DrinkDataModel] = []
                 let resultArray = myresult!["drinks"]
-                
-                //let passengers = myresult!["drinks"]
-                 var sum = 0
                 for i in resultArray.arrayValue {
                     
                     print(i)
                     
-                   sum+=1
                     let idDrink = i["strDrink"].stringValue
                     self.idDrinks.append(idDrink)
                     let image = i["strDrinkThumb"].stringValue
                     self.photo.append(image)
-                    var ingredient = ""
-                    for n in 1...100 {
-                        ingredient = i["strIngredient\(n)"].stringValue
-                        if ingredient != nil {
-                            self.ingredients.append(ingredient)
-                            self.ingredientsDetailLabel.text = ingredient
-                        }
-                        
-                    }
-                    
-                    
+                    let ingredient = i["strIngredient1"].stringValue
+                    self.ingredients.append(ingredient)
                     let instruction = i["strInstructions"].stringValue
                     self.instructions.append(instruction)
                     
                     
                     self.nameDetailLabel.text = ("Cocktail name:  \(idDrink)")
-                    //self.imageDetail.image = UIImage(named: image)
-                    
                     self.instructionsDetailLabel.text = instruction
+                    self.ingredientsDetailLabel.text = ingredient
                     
                     let imageURL = NSURL(string: image)
                     if imageURL != nil {

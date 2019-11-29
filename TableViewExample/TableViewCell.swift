@@ -19,9 +19,12 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var fondoImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+   
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        fondoImage.layer.cornerRadius = 15
         // Initialization code
     }
     

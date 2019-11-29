@@ -19,17 +19,11 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
     var idDrinks = [String]()
     var name = [String]()
     var photo = [String]()
-   
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        //viewMain.layer.cornerRadius = 10
         fetchData()
         
     }
@@ -46,7 +40,6 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.removeSpinner()
                 print(myresponse.result)
                 let myresult = try? JSON(data: myresponse.data!)
-                //print(myresult)
                 let resultArray = myresult!["drinks"]
                 for i in resultArray.arrayValue {
                     print(i)
@@ -74,16 +67,12 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as! TableViewCell
         
-        //let headline = photo[indexPath.row]
-    
         cell.titleLabel?.text = name[indexPath.row]
-        //cell.descriptionText?.text = "headline.text"
         let imageURL = NSURL(string: photo[indexPath.row])
         if imageURL != nil {
             let data = NSData(contentsOf: (imageURL as URL?)!)
             cell.fondoImage.image = UIImage(data: data! as Data)
         }
-        
         
         return cell
     }
@@ -91,19 +80,9 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailDrinksViewController") as? DetailDrinksViewController
         vc?.id = idDrinks[indexPath.row]
-        //vc?.nameDetailLabel.text =
-        
-        
         navigationController?.pushViewController(vc!, animated: true)
     }
     
-    
-    
-    
-    
-
-	
-
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.

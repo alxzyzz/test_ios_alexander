@@ -49,7 +49,7 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
                 //print(myresult)
                 let resultArray = myresult!["drinks"]
                 for i in resultArray.arrayValue {
-                    print(i )
+                    print(i)
                     let idDrink = i["idDrink"].stringValue
                     self.idDrinks.append(idDrink)
                     let nameDrink = i["strDrink"].stringValue

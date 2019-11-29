@@ -46,6 +46,9 @@ class DetailDrinksViewController : UIViewController {
        
     }
     
+    @IBAction func backButton(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     
@@ -74,7 +77,7 @@ class DetailDrinksViewController : UIViewController {
                     self.instructions.append(instruction)
                     
                     
-                    self.nameDetailLabel.text = ("Cocktail name:  \(idDrink)")
+                    self.nameDetailLabel.text = idDrink
                     self.instructionsDetailLabel.text = instruction
                     self.ingredientsDetailLabel.text = ingredient
                     

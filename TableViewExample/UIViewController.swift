@@ -37,3 +37,20 @@ extension UIViewController {
         }
     }
 }
+
+
+extension UIViewController {
+    
+    func presentVC(_ controller: UIViewController, modalPresentationStyle: UIModalPresentationStyle? = nil , animated: Bool, completion: (()->())? = nil) {
+        
+        if #available(iOS 13.0, *), modalPresentationStyle == nil {
+            controller.modalPresentationStyle = .overFullScreen
+        } else if let style: UIModalPresentationStyle = modalPresentationStyle {
+            controller.modalPresentationStyle = style
+        }
+        
+        self.present(controller, animated: animated, completion: completion)
+        
+    }
+    
+}

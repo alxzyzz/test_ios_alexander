@@ -80,7 +80,7 @@ class ExampleViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailDrinksViewController") as? DetailDrinksViewController
         vc?.id = idDrinks[indexPath.row]
-        navigationController?.pushViewController(vc!, animated: true)
+        presentVC(vc!, animated: true)
     }
     
 	override func didReceiveMemoryWarning() {

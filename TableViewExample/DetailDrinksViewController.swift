@@ -21,6 +21,7 @@ class DetailDrinksViewController : UIViewController {
     @IBOutlet weak var instructionsDetailLabel: UILabel!
     
     
+    
     @IBOutlet weak var viewImage: UIView!
     @IBOutlet weak var viewMain: UIView!
     var id = ""
@@ -59,25 +60,36 @@ class DetailDrinksViewController : UIViewController {
                 //print(myresult)
                 //var drinksArray:[DrinkDataModel] = []
                 let resultArray = myresult!["drinks"]
-                //let passengers = myresult!["drinks"]
                 
+                //let passengers = myresult!["drinks"]
+                 var sum = 0
                 for i in resultArray.arrayValue {
+                    
                     print(i)
                     
-                    
+                   sum+=1
                     let idDrink = i["strDrink"].stringValue
                     self.idDrinks.append(idDrink)
                     let image = i["strDrinkThumb"].stringValue
                     self.photo.append(image)
-                    let ingredient = i["strIngredient1"].stringValue
-                    self.ingredients.append(ingredient)
+                    var ingredient = ""
+                    for n in 1...100 {
+                        ingredient = i["strIngredient\(n)"].stringValue
+                        if ingredient != nil {
+                            self.ingredients.append(ingredient)
+                            self.ingredientsDetailLabel.text = ingredient
+                        }
+                        
+                    }
+                    
+                    
                     let instruction = i["strInstructions"].stringValue
                     self.instructions.append(instruction)
                     
                     
-                    self.nameDetailLabel.text = ("Cocktail name: \(idDrink)")
+                    self.nameDetailLabel.text = ("Cocktail name:  \(idDrink)")
                     //self.imageDetail.image = UIImage(named: image)
-                    self.ingredientsDetailLabel.text = ingredient
+                    
                     self.instructionsDetailLabel.text = instruction
                     
                     let imageURL = NSURL(string: image)

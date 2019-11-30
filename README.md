@@ -5,3 +5,6 @@
 3. Ingresar desde terminal a la ruta donde se encuentra el proyecto previamente descargado 
 4. Desde terminal en la ubicación del proyecto ejectuar "pod install" y seguido de "pod update"
 5. Posteriormente abrir la carpeta donde se encuentra el proyecto y ejecutar TableViewExample.xcworkspace
+
+
+Como dato, la app debe ser probada en la version 10.3 de Xcode

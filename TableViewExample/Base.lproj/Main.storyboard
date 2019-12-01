@@ -180,7 +180,7 @@
                                         <rect key="frame" x="10" y="8" width="394" height="749"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1I-zv-yNN">
-                                                <rect key="frame" x="8" y="342" width="358" height="212"/>
+                                                <rect key="frame" x="18" y="278" width="358" height="176"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArG-Xz-qyd">
                                                         <rect key="frame" x="8" y="8" width="94" height="21"/>
@@ -192,55 +192,24 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaC-8r-knh">
-                                                        <rect key="frame" x="8" y="37" width="342" height="175"/>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="16"/>
+                                                        <rect key="frame" x="8" y="49" width="342" height="18.5"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="AaC-8r-knh" secondAttribute="bottom" id="2Wz-sh-JWT"/>
                                                     <constraint firstItem="AaC-8r-knh" firstAttribute="leading" secondItem="ArG-Xz-qyd" secondAttribute="leading" id="KLL-Un-rAj"/>
                                                     <constraint firstItem="ArG-Xz-qyd" firstAttribute="leading" secondItem="B1I-zv-yNN" secondAttribute="leading" constant="8" id="QZ2-0l-7A0"/>
                                                     <constraint firstItem="AaC-8r-knh" firstAttribute="trailing" secondItem="B1I-zv-yNN" secondAttribute="trailingMargin" id="SJx-uj-khU"/>
                                                     <constraint firstItem="ArG-Xz-qyd" firstAttribute="top" secondItem="B1I-zv-yNN" secondAttribute="topMargin" id="bhq-EI-eOb"/>
-                                                    <constraint firstItem="AaC-8r-knh" firstAttribute="top" secondItem="ArG-Xz-qyd" secondAttribute="bottom" constant="8" symbolic="YES" id="oAt-Ej-Z25"/>
+                                                    <constraint firstItem="AaC-8r-knh" firstAttribute="top" secondItem="ArG-Xz-qyd" secondAttribute="bottom" constant="20" id="oAt-Ej-Z25"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ArG-Xz-qyd" secondAttribute="trailing" constant="20" symbolic="YES" id="u1F-zB-IkG"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjp-y9-ERI">
-                                                <rect key="frame" x="8" y="562" width="358" height="179"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* How to prepare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-v6-M3S">
-                                                        <rect key="frame" x="8" y="0.0" width="130" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snP-9R-CQ4">
-                                                        <rect key="frame" x="8" y="29" width="342" height="125"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="125" id="yyN-yP-yfg"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="16"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8e5-v6-M3S" secondAttribute="trailing" constant="20" symbolic="YES" id="9ET-DN-IyQ"/>
-                                                    <constraint firstItem="snP-9R-CQ4" firstAttribute="leading" secondItem="8e5-v6-M3S" secondAttribute="leading" id="9be-xo-8CT"/>
-                                                    <constraint firstItem="8e5-v6-M3S" firstAttribute="top" secondItem="cjp-y9-ERI" secondAttribute="top" id="Gbx-fM-gWz"/>
-                                                    <constraint firstAttribute="bottom" secondItem="snP-9R-CQ4" secondAttribute="bottom" constant="25" id="cEy-UF-mNo"/>
-                                                    <constraint firstItem="8e5-v6-M3S" firstAttribute="leading" secondItem="cjp-y9-ERI" secondAttribute="leading" constant="8" id="lBF-8E-w6Z"/>
-                                                    <constraint firstItem="snP-9R-CQ4" firstAttribute="trailing" secondItem="cjp-y9-ERI" secondAttribute="trailingMargin" id="wCK-wR-sI1"/>
-                                                    <constraint firstItem="snP-9R-CQ4" firstAttribute="top" secondItem="8e5-v6-M3S" secondAttribute="bottom" constant="8" symbolic="YES" id="zhq-ge-zi3"/>
-                                                </constraints>
-                                            </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Cf-9T-8aa">
-                                                <rect key="frame" x="77" y="71" width="240" height="215"/>
+                                                <rect key="frame" x="77" y="42" width="240" height="215"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oUe-fR-lq2">
                                                         <rect key="frame" x="8" y="8" width="224" height="199"/>
@@ -254,21 +223,48 @@
                                                     <constraint firstItem="oUe-fR-lq2" firstAttribute="leading" secondItem="6Cf-9T-8aa" secondAttribute="leading" constant="8" id="zeg-Ip-R7h"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cjp-y9-ERI">
+                                                <rect key="frame" x="18" y="462" width="358" height="279"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* How to prepare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-v6-M3S">
+                                                        <rect key="frame" x="8" y="0.0" width="130" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="13" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snP-9R-CQ4">
+                                                        <rect key="frame" x="8" y="41" width="342" height="18.5"/>
+                                                        <fontDescription key="fontDescription" name="GujaratiSangamMN" family="Gujarati Sangam MN" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8e5-v6-M3S" secondAttribute="trailing" constant="20" symbolic="YES" id="9ET-DN-IyQ"/>
+                                                    <constraint firstItem="snP-9R-CQ4" firstAttribute="leading" secondItem="8e5-v6-M3S" secondAttribute="leading" id="9be-xo-8CT"/>
+                                                    <constraint firstItem="8e5-v6-M3S" firstAttribute="top" secondItem="cjp-y9-ERI" secondAttribute="top" id="Gbx-fM-gWz"/>
+                                                    <constraint firstItem="8e5-v6-M3S" firstAttribute="leading" secondItem="cjp-y9-ERI" secondAttribute="leading" constant="8" id="lBF-8E-w6Z"/>
+                                                    <constraint firstItem="snP-9R-CQ4" firstAttribute="trailing" secondItem="cjp-y9-ERI" secondAttribute="trailingMargin" id="wCK-wR-sI1"/>
+                                                    <constraint firstItem="snP-9R-CQ4" firstAttribute="top" secondItem="8e5-v6-M3S" secondAttribute="bottom" constant="20" id="zhq-ge-zi3"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="cjp-y9-ERI" secondAttribute="trailing" constant="28" id="5Ok-jb-CSB"/>
+                                            <constraint firstItem="B1I-zv-yNN" firstAttribute="top" secondItem="7nR-Hn-KDu" secondAttribute="top" constant="278" id="15J-XL-Jg4"/>
+                                            <constraint firstAttribute="trailing" secondItem="cjp-y9-ERI" secondAttribute="trailing" constant="18" id="5Ok-jb-CSB"/>
                                             <constraint firstAttribute="trailing" secondItem="6Cf-9T-8aa" secondAttribute="trailing" constant="77" id="6Ei-RD-eeZ"/>
-                                            <constraint firstItem="B1I-zv-yNN" firstAttribute="top" secondItem="6Cf-9T-8aa" secondAttribute="bottom" constant="56" id="6Ne-C8-BgD"/>
-                                            <constraint firstItem="cjp-y9-ERI" firstAttribute="top" secondItem="B1I-zv-yNN" secondAttribute="bottom" constant="8" symbolic="YES" id="8xg-j1-Ogc"/>
+                                            <constraint firstItem="cjp-y9-ERI" firstAttribute="top" secondItem="B1I-zv-yNN" secondAttribute="bottom" constant="8" id="8xg-j1-Ogc"/>
                                             <constraint firstAttribute="bottom" secondItem="cjp-y9-ERI" secondAttribute="bottom" constant="8" id="B9x-9C-ra1"/>
-                                            <constraint firstItem="cjp-y9-ERI" firstAttribute="leading" secondItem="7nR-Hn-KDu" secondAttribute="leading" constant="8" id="Dpt-Qa-t3X"/>
+                                            <constraint firstItem="cjp-y9-ERI" firstAttribute="leading" secondItem="7nR-Hn-KDu" secondAttribute="leading" constant="18" id="Dpt-Qa-t3X"/>
                                             <constraint firstItem="6Cf-9T-8aa" firstAttribute="leading" secondItem="7nR-Hn-KDu" secondAttribute="leading" constant="77" id="IcD-fa-p5t"/>
                                             <constraint firstAttribute="height" constant="749" id="Jkd-jO-6sJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="B1I-zv-yNN" secondAttribute="trailing" constant="28" id="SgH-VZ-gDz"/>
-                                            <constraint firstItem="cjp-y9-ERI" firstAttribute="top" secondItem="6Cf-9T-8aa" secondAttribute="bottom" constant="276" id="aAV-3G-gYt"/>
-                                            <constraint firstItem="6Cf-9T-8aa" firstAttribute="top" secondItem="7nR-Hn-KDu" secondAttribute="top" constant="71" id="gGb-zL-3sV"/>
-                                            <constraint firstItem="B1I-zv-yNN" firstAttribute="leading" secondItem="7nR-Hn-KDu" secondAttribute="leading" constant="8" id="t2L-O7-TRK"/>
+                                            <constraint firstAttribute="trailing" secondItem="B1I-zv-yNN" secondAttribute="trailing" constant="18" id="SgH-VZ-gDz"/>
+                                            <constraint firstItem="cjp-y9-ERI" firstAttribute="top" secondItem="6Cf-9T-8aa" secondAttribute="bottom" constant="205" id="aAV-3G-gYt"/>
+                                            <constraint firstItem="6Cf-9T-8aa" firstAttribute="top" secondItem="7nR-Hn-KDu" secondAttribute="top" constant="42" id="gGb-zL-3sV"/>
+                                            <constraint firstItem="B1I-zv-yNN" firstAttribute="leading" secondItem="7nR-Hn-KDu" secondAttribute="leading" constant="18" id="t2L-O7-TRK"/>
+                                            <constraint firstItem="B1I-zv-yNN" firstAttribute="top" secondItem="6Cf-9T-8aa" secondAttribute="bottom" constant="21" id="uiG-DA-zNq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -276,6 +272,7 @@
                                     <constraint firstItem="7nR-Hn-KDu" firstAttribute="centerX" secondItem="yFi-KT-ZXO" secondAttribute="centerX" id="IfK-90-m27"/>
                                     <constraint firstAttribute="trailing" secondItem="7nR-Hn-KDu" secondAttribute="trailing" id="MRU-Wh-vU1"/>
                                     <constraint firstItem="7nR-Hn-KDu" firstAttribute="top" secondItem="yFi-KT-ZXO" secondAttribute="top" constant="8" id="PPe-eK-fBN"/>
+                                    <constraint firstAttribute="bottom" secondItem="B1I-zv-yNN" secondAttribute="bottom" constant="306" id="ry6-Hf-yDh"/>
                                     <constraint firstItem="7nR-Hn-KDu" firstAttribute="leading" secondItem="yFi-KT-ZXO" secondAttribute="leading" constant="10" id="wc4-8f-lTA"/>
                                     <constraint firstAttribute="bottom" secondItem="7nR-Hn-KDu" secondAttribute="bottom" constant="11" id="zbX-DU-cWZ"/>
                                 </constraints>

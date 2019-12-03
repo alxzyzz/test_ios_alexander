@@ -90,9 +90,20 @@ class DetailDrinksViewController : UIViewController {
                     let tamaño = array.count
                     var ingredients = ""
                     for index in 0..<tamaño {
-                        let h = (arrayMeasure[index] + " - " + array[index] + "\n")
-                        ingredients.append(h)
-                        self.ingredientsDetailLabel.text = ingredients
+                        if arrayMeasure.count != array.count{
+                            let alert = UIAlertController(title: "Alerta", message: "Error en los tamaños de los arreglos", preferredStyle: UIAlertControllerStyle.alert)
+                            alert.addAction(UIAlertAction(title: "Aceptar", style: UIAlertActionStyle.default, handler: nil))
+                            //self.present(alert, animated: true, completion: nil)
+                            self.dismiss(animated: true, completion: nil)
+                        }
+                       
+                        else{
+                            let h = (arrayMeasure[index] + " - " + array[index] + "\n")
+                            ingredients.append(h)
+                            self.ingredientsDetailLabel.text = ingredients
+                            
+                        }
+                        
                         
                     }
                     
